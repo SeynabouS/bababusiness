@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baba Business — Boutique bazar à Grand Mbour 2</title>
+  <meta name="description" content="Baba Business : vente de produits bazar, déodorants, parfums, montres, compléments alimentaires et accessoires à Grand Mbour 2." />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar" id="accueil">
+    <a class="brand" href="#accueil" aria-label="Baba Business accueil">
+      <img src="assets/logo-baba-business.png" alt="Logo Baba Business" />
+      <span>Baba Business</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#produits">Produits</a>
+      <a href="#promos">Promos</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+      <a href="admin.html" class="admin-link">Admin</a>
+      <button class="cart-pill" id="openCart" type="button">Panier <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Bazar • Beauté • Accessoires • Bien-être</p>
+        <h1>Votre boutique bazar de confiance à Grand Mbour 2</h1>
+        <p class="hero-text">
+          Déodorants, parfums, montres, compléments alimentaires, accessoires du quotidien et petits produits utiles : Baba Business vous accompagne avec des articles pratiques, accessibles et disponibles rapidement.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://wa.me/221773831231?text=Bonjour%20Baba%20Business%2C%20je%20souhaite%20commander%20un%20produit." target="_blank" rel="noopener">Commander sur WhatsApp</a>
+          <a class="btn secondary" href="#produits">Voir les produits</a>
+        </div>
+        <div class="trust-grid" aria-label="Avantages Baba Business">
+          <div><strong>Livraison locale</strong><span>Grand Mbour 2 et alentours</span></div>
+          <div><strong>Commande rapide</strong><span>WhatsApp ou téléphone</span></div>
+          <div><strong>Produits variés</strong><span>Beauté, bazar, accessoires</span></div>
+        </div>
+      </div>
+
+      <div class="hero-card reveal">
+        <div class="floating-badge">BABA BUSINESS</div>
+        <img class="hero-logo" src="assets/logo-baba-business.png" alt="Logo Baba Business" />
+        <h2>Votre satisfaction, notre priorité !</h2>
+        <ul>
+          <li>Déodorants & soins</li>
+          <li>Parfums & montres</li>
+          <li>Compléments alimentaires</li>
+          <li>Produits bazar utiles au quotidien</li>
+        </ul>
+        <a class="phone-card" href="tel:+221773831231">📞 77 383 12 31</a>
+        <a class="phone-card" href="tel:+221773625480">📞 77 362 54 80</a>
+      </div>
+    </section>
+
+    <section class="strip" aria-label="Informations rapides">
+      <span>📍 Grand Mbour 2</span>
+      <span>✉️ babacartrey@gmail.com</span>
+      <span>📸 Instagram : Baba Business</span>
+    </section>
+
+    <section class="section" id="produits">
+      <div class="section-title reveal">
+        <p class="eyebrow">Catalogue</p>
+        <h2>Nos produits bazar</h2>
+        <p>Filtrez par catégorie, ajoutez au panier puis envoyez votre commande directement sur WhatsApp. Les produits peuvent maintenant être gérés depuis l’espace admin.</p>
+      </div>
+
+      <div class="filters reveal" role="tablist" aria-label="Filtres de produits">
+        <button class="filter active" data-filter="all" type="button">Tous</button>
+        <button class="filter" data-filter="beaute" type="button">Beauté</button>
+        <button class="filter" data-filter="parfum" type="button">Parfums</button>
+        <button class="filter" data-filter="accessoire" type="button">Accessoires</button>
+        <button class="filter" data-filter="bienetre" type="button">Bien-être</button>
+        <button class="filter" data-filter="maison" type="button">Maison</button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="promo section" id="promos">
+      <div class="promo-card reveal">
+        <div>
+          <p class="eyebrow">Offre spéciale</p>
+          <h2>Pack beauté & fraîcheur</h2>
+          <p>Combinez un déodorant, un parfum et un accessoire utile pour composer un pack simple à offrir ou à utiliser au quotidien.</p>
+        </div>
+        <a class="btn primary" href="https://wa.me/221773831231?text=Bonjour%20Baba%20Business%2C%20je%20souhaite%20avoir%20les%20promotions%20du%20moment." target="_blank" rel="noopener">Demander les promos</a>
+      </div>
+    </section>
+
+    <section class="section about" id="apropos">
+      <div class="about-card reveal">
+        <p class="eyebrow">À propos</p>
+        <h2>Une boutique proche de ses clients</h2>
+        <p>
+          Baba Business propose des produits variés pour répondre aux besoins du quotidien : hygiène, beauté, accessoires, compléments alimentaires et articles bazar. Notre objectif est simple : vous offrir un service rapide, clair et humain.
+        </p>
+      </div>
+      <div class="stats reveal">
+        <div><strong>+50</strong><span>Références possibles</span></div>
+        <div><strong>2</strong><span>Contacts directs</span></div>
+        <div><strong>100%</strong><span>Service client</span></div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-title reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Passer une commande</h2>
+        <p>Écrivez-nous ou appelez directement pour vérifier la disponibilité d’un produit.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3>Coordonnées</h3>
+          <a href="tel:+221773831231">📞 77 383 12 31</a>
+          <a href="tel:+221773625480">📞 77 362 54 80</a>
+          <a href="mailto:babacartrey@gmail.com">✉️ babacartrey@gmail.com</a>
+          <span>📍 Grand Mbour 2</span>
+          <span>📸 Baba Business</span>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <label>
+            Votre nom
+            <input type="text" id="clientName" placeholder="Ex : Awa" required />
+          </label>
+          <label>
+            Produit recherché
+            <input type="text" id="clientProduct" placeholder="Ex : parfum, montre, déodorant…" required />
+          </label>
+          <label>
+            Message
+            <textarea id="clientMessage" rows="4" placeholder="Bonjour, je veux connaître le prix et la disponibilité."></textarea>
+          </label>
+          <button class="btn primary" type="submit">Envoyer sur WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true" aria-label="Panier de commande">
+    <div class="cart-header">
+      <h2>Votre panier</h2>
+      <button id="closeCart" type="button" aria-label="Fermer le panier">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total"><span>Total estimé</span><strong id="cartTotal">0 FCFA</strong></div>
+      <a id="whatsappOrder" class="btn primary full" href="https://wa.me/221773831231" target="_blank" rel="noopener">Envoyer la commande</a>
+      <button class="btn ghost full" id="clearCart" type="button">Vider le panier</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <footer>
+    <img src="assets/logo-baba-business.png" alt="Logo Baba Business" />
+    <p>© <span id="year"></span> Baba Business — Vente de produits bazar, beauté et accessoires.</p>
+    <a class="footer-admin" href="admin.html">Espace admin</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

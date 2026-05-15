@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administration — Baba Business</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="topbar admin-topbar">
+    <a class="brand" href="index.html" aria-label="Retour à la boutique Baba Business">
+      <img src="assets/logo-baba-business.png" alt="Logo Baba Business" />
+      <span>Baba Business Admin</span>
+    </a>
+    <nav class="nav-links admin-nav" aria-label="Navigation admin">
+      <a href="index.html">Voir la boutique</a>
+      <button class="cart-pill" id="logoutBtn" type="button">Déconnexion</button>
+    </nav>
+  </header>
+
+  <main class="admin-main" id="adminApp" hidden>
+    <section class="admin-hero">
+      <div>
+        <p class="eyebrow">Espace administrateur</p>
+        <h1>Gérer les produits Baba Business</h1>
+        <p>Ajoutez un produit avec sa photo, son prix et sa description. Vous pouvez aussi modifier ou supprimer un produit du catalogue.</p>
+      </div>
+      <div class="admin-status">
+        <strong id="productCounter">0 produit</strong>
+        <span>Catalogue JSON de la boutique</span>
+      </div>
+    </section>
+
+    <section class="admin-grid">
+      <form class="admin-panel product-form" id="productForm">
+        <div class="panel-title">
+          <div>
+            <p class="eyebrow">Produit</p>
+            <h2 id="formTitle">Ajouter un produit</h2>
+          </div>
+          <button class="btn ghost small" type="button" id="newProductBtn">Nouveau</button>
+        </div>
+
+        <input type="hidden" id="productId" />
+
+        <label>
+          Nom du produit
+          <input type="text" id="productName" placeholder="Ex : Parfum Musc blanc" required />
+        </label>
+
+        <div class="form-row">
+          <label>
+            Catégorie
+            <select id="productCategory" required>
+              <option value="beaute">Beauté</option>
+              <option value="parfum">Parfums</option>
+              <option value="accessoire">Accessoires</option>
+              <option value="bienetre">Bien-être</option>
+              <option value="maison">Maison / Bazar</option>
+            </select>
+          </label>
+          <label>
+            Prix en FCFA
+            <input type="number" id="productPrice" min="0" step="100" placeholder="Ex : 5000" required />
+          </label>
+        </div>
+
+        <label>
+          Description
+          <textarea id="productDesc" rows="4" placeholder="Décrivez le produit, le format, l'utilisation, la disponibilité…" required></textarea>
+        </label>
+
+        <div class="form-row">
+          <label>
+            Photo du produit
+            <input type="file" id="productImage" accept="image/*" />
+          </label>
+          <label>
+            Icône si pas de photo
+            <input type="text" id="productEmoji" maxlength="3" placeholder="🛍️" />
+          </label>
+        </div>
+
+        <div class="image-preview-box">
+          <div class="preview-frame" id="imagePreview">Aperçu</div>
+          <label class="checkbox-line">
+            <input type="checkbox" id="removeImage" />
+            Retirer la photo actuelle
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Enregistrer le produit</button>
+          <button class="btn secondary" type="button" id="cancelEditBtn">Annuler</button>
+        </div>
+
+        <p class="admin-note">Conseil : utilisez des photos claires et légères. Taille maximale acceptée : 5 Mo par image.</p>
+      </form>
+
+      <aside class="admin-panel backup-panel">
+        <p class="eyebrow">Sauvegarde</p>
+        <h2>Importer / exporter</h2>
+        <p>Vous pouvez télécharger une sauvegarde du catalogue JSON, ou importer un catalogue déjà sauvegardé.</p>
+        <div class="backup-actions">
+          <button class="btn primary full" type="button" id="exportBtn">Exporter les produits</button>
+          <label class="btn secondary full import-label" for="importFile">Importer un fichier JSON</label>
+          <input type="file" id="importFile" accept="application/json" hidden />
+          <button class="btn ghost full" type="button" id="resetBtn">Réinitialiser le catalogue</button>
+        </div>
+        <div class="admin-warning">
+          <strong>Important</strong>
+          <p>Cette version fonctionne sans base de données : les produits sont enregistrés dans un fichier JSON et les photos dans un dossier uploads. Pour Render, ajoutez un disque persistant afin de conserver les ajouts après redémarrage ou redéploiement.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="admin-panel product-list-panel">
+      <div class="panel-title product-list-title">
+        <div>
+          <p class="eyebrow">Catalogue</p>
+          <h2>Produits enregistrés</h2>
+        </div>
+        <label class="search-box">
+          Rechercher
+          <input type="search" id="searchProduct" placeholder="Nom, catégorie, description…" />
+        </label>
+      </div>
+      <div class="admin-product-list" id="adminProductList"></div>
+    </section>
+  </main>
+
+  <section class="login-screen" id="loginScreen">
+    <form class="login-card" id="loginForm">
+      <img src="assets/logo-baba-business.png" alt="Logo Baba Business" />
+      <p class="eyebrow">Connexion admin</p>
+      <h1>Espace Baba Business</h1>
+      <p>Entrez le mot de passe pour gérer les produits.</p>
+      <label>
+        Mot de passe
+        <input type="password" id="adminPassword" placeholder="Mot de passe admin" required />
+      </label>
+      <button class="btn primary full" type="submit">Se connecter</button>
+      <p class="login-error" id="loginError" aria-live="polite"></p>
+      <a class="back-shop" href="index.html">← Retour à la boutique</a>
+    </form>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="admin.js"></script>
+</body>
+</html>

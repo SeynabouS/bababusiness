@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "name": "Déodorant fraîcheur",
+    "category": "beaute",
+    "price": 2500,
+    "emoji": "🧴",
+    "desc": "Déodorant pratique pour une sensation de fraîcheur au quotidien.",
+    "image": ""
+  },
+  {
+    "id": "2",
+    "name": "Parfum homme/femme",
+    "category": "parfum",
+    "price": 6500,
+    "emoji": "🌸",
+    "desc": "Parfum élégant pour offrir ou se faire plaisir.",
+    "image": ""
+  },
+  {
+    "id": "3",
+    "name": "Montre classique",
+    "category": "accessoire",
+    "price": 12000,
+    "emoji": "⌚",
+    "desc": "Montre simple et chic pour compléter votre style.",
+    "image": ""
+  },
+  {
+    "id": "4",
+    "name": "Complément alimentaire",
+    "category": "bienetre",
+    "price": 8000,
+    "emoji": "💊",
+    "desc": "Produit bien-être à commander selon disponibilité.",
+    "image": ""
+  },
+  {
+    "id": "5",
+    "name": "Sac pratique",
+    "category": "accessoire",
+    "price": 9500,
+    "emoji": "👜",
+    "desc": "Sac utile pour le quotidien, disponible en plusieurs styles.",
+    "image": ""
+  },
+  {
+    "id": "6",
+    "name": "Mini enceinte",
+    "category": "maison",
+    "price": 11000,
+    "emoji": "🔊",
+    "desc": "Petit accessoire audio pour la maison ou les sorties.",
+    "image": ""
+  },
+  {
+    "id": "7",
+    "name": "Lunettes tendance",
+    "category": "accessoire",
+    "price": 5000,
+    "emoji": "🕶️",
+    "desc": "Lunettes stylées pour compléter votre look.",
+    "image": ""
+  },
+  {
+    "id": "8",
+    "name": "Thermos / gourde",
+    "category": "maison",
+    "price": 4500,
+    "emoji": "🥤",
+    "desc": "Article pratique pour garder vos boissons avec vous.",
+    "image": ""
+  },
+  {
+    "id": "9",
+    "name": "Crème hydratante",
+    "category": "beaute",
+    "price": 3500,
+    "emoji": "🧼",
+    "desc": "Soin doux pour hydrater et protéger la peau.",
+    "image": ""
+  },
+  {
+    "id": "10",
+    "name": "Kit cadeau bazar",
+    "category": "maison",
+    "price": 15000,
+    "emoji": "🎁",
+    "desc": "Composition personnalisée selon votre budget.",
+    "image": ""
+  },
+  {
+    "id": "11",
+    "name": "Accessoire téléphone",
+    "category": "accessoire",
+    "price": 3000,
+    "emoji": "📱",
+    "desc": "Chargeur, câble ou petit accessoire selon arrivage.",
+    "image": ""
+  },
+  {
+    "id": "12",
+    "name": "Diffuseur de parfum",
+    "category": "parfum",
+    "price": 7000,
+    "emoji": "🏠",
+    "desc": "Pour parfumer agréablement votre intérieur.",
+    "image": ""
+  }
+]
