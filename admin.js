@@ -25,6 +25,9 @@ const cancelEditBtn = document.getElementById('cancelEditBtn');
 const productCounter = document.getElementById('productCounter');
 const adminProductList = document.getElementById('adminProductList');
 const searchProduct = document.getElementById('searchProduct');
+const exportBtn = document.getElementById('exportBtn');
+const importFile = document.getElementById('importFile');
+const resetBtn = document.getElementById('resetBtn');
 const toast = document.getElementById('toast');
 
 function escapeHTML(value) {
