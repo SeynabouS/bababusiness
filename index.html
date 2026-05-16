@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baba Business — Boutique bazar à Grand Mbour 2</title>
-  <meta name="description" content="Baba Business : vente de produits bazar, déodorants, parfums, montres, compléments alimentaires et accessoires à Grand Mbour 2." />
+  <title>Baba Business — Boutique à Grand Mbour 2</title>
+  <meta name="description" content="Baba Business : vente de produits, déodorants, parfums, montres, compléments alimentaires et accessoires à Grand Mbour 2." />
   <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -30,8 +30,8 @@
   <main>
     <section class="hero">
       <div class="hero-content reveal">
-        <p class="eyebrow">Bazar • Beauté • Accessoires • Bien-être</p>
-        <h1>Votre boutique bazar de confiance à Grand Mbour 2</h1>
+        <p class="eyebrow">Beauté • Accessoires • Bien-être</p>
+        <h1>Votre boutique de confiance à Grand Mbour 2</h1>
         <p class="hero-text">
           Déodorants, parfums, montres, compléments alimentaires, accessoires du quotidien et petits produits utiles : Baba Business vous accompagne avec des articles pratiques, accessibles et disponibles rapidement.
         </p>
@@ -42,7 +42,7 @@
         <div class="trust-grid" aria-label="Avantages Baba Business">
           <div><strong>Livraison locale</strong><span>Grand Mbour 2 et alentours</span></div>
           <div><strong>Commande rapide</strong><span>WhatsApp ou téléphone</span></div>
-          <div><strong>Produits variés</strong><span>Beauté, bazar, accessoires</span></div>
+          <div><strong>Produits variés</strong><span>Beauté, accessoires</span></div>
         </div>
       </div>
 
@@ -54,7 +54,7 @@
           <li>Déodorants & soins</li>
           <li>Parfums & montres</li>
           <li>Compléments alimentaires</li>
-          <li>Produits bazar utiles au quotidien</li>
+          <li>Produits utiles au quotidien</li>
         </ul>
         <a class="phone-card" href="tel:+221773831231">📞 77 383 12 31</a>
         <a class="phone-card" href="tel:+221773625480">📞 77 362 54 80</a>
@@ -70,7 +70,7 @@
     <section class="section" id="produits">
       <div class="section-title reveal">
         <p class="eyebrow">Catalogue</p>
-        <h2>Nos produits bazar</h2>
+        <h2>Nos produits</h2>
         <p>Filtrez par catégorie, ajoutez au panier puis envoyez votre commande directement sur WhatsApp. Les produits peuvent maintenant être gérés depuis l’espace admin.</p>
       </div>
 
@@ -78,6 +78,7 @@
         <button class="filter active" data-filter="all" type="button">Tous</button>
         <button class="filter" data-filter="beaute" type="button">Beauté</button>
         <button class="filter" data-filter="parfum" type="button">Parfums</button>
+        <button class="filter" data-filter="hygiene" type="button">Hygiène</button>
         <button class="filter" data-filter="accessoire" type="button">Accessoires</button>
         <button class="filter" data-filter="bienetre" type="button">Bien-être</button>
         <button class="filter" data-filter="maison" type="button">Maison</button>
@@ -102,7 +103,7 @@
         <p class="eyebrow">À propos</p>
         <h2>Une boutique proche de ses clients</h2>
         <p>
-          Baba Business propose des produits variés pour répondre aux besoins du quotidien : hygiène, beauté, accessoires, compléments alimentaires et articles bazar. Notre objectif est simple : vous offrir un service rapide, clair et humain.
+          Baba Business propose des produits variés pour répondre aux besoins du quotidien : hygiène, beauté, accessoires, compléments alimentaires et articles. Notre objectif est simple : vous offrir un service rapide, clair et humain.
         </p>
       </div>
       <div class="stats reveal">
@@ -160,11 +161,27 @@
       <button class="btn ghost full" id="clearCart" type="button">Vider le panier</button>
     </div>
   </aside>
+
+  <!-- Modal de visualisation des images -->
+  <div class="modal-gallery" id="modalGallery">
+    <button class="modal-close" id="modalClose" aria-label="Fermer la galerie">&times;</button>
+    <div class="modal-gallery-content">
+      <div class="modal-image-wrapper" id="modalImageWrapper">
+        <img id="modalImage" src="" alt="Produit en détail" />
+      </div>
+      <div class="modal-info">
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
+        <div class="modal-price" id="modalPrice"></div>
+      </div>
+    </div>
+  </div>
+
   <div class="overlay" id="overlay"></div>
 
   <footer>
     <img src="assets/logo-baba-business.png" alt="Logo Baba Business" />
-    <p>© <span id="year"></span> Baba Business — Vente de produits bazar, beauté et accessoires.</p>
+    <p>© <span id="year"></span> Baba Business — Vente de produits, beauté et accessoires.</p>
     <a class="footer-admin" href="admin.html">Espace admin</a>
   </footer>
 

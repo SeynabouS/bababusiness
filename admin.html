@@ -56,13 +56,14 @@
             <select id="productCategory" required>
               <option value="beaute">Beauté</option>
               <option value="parfum">Parfums</option>
+              <option value="hygiene">Hygiène</option>
               <option value="accessoire">Accessoires</option>
               <option value="bienetre">Bien-être</option>
               <option value="maison">Maison / Bazar</option>
             </select>
           </label>
           <label>
-            Prix en FCFA
+            Prix en FCFA <small>(0 = prix sur demande)</small>
             <input type="number" id="productPrice" min="0" step="100" placeholder="Ex : 5000" required />
           </label>
         </div>
@@ -98,22 +99,6 @@
 
         <p class="admin-note">Conseil : utilisez des photos claires et légères. Taille maximale acceptée : 5 Mo par image.</p>
       </form>
-
-      <aside class="admin-panel backup-panel">
-        <p class="eyebrow">Sauvegarde</p>
-        <h2>Importer / exporter</h2>
-        <p>Vous pouvez télécharger une sauvegarde du catalogue JSON, ou importer un catalogue déjà sauvegardé.</p>
-        <div class="backup-actions">
-          <button class="btn primary full" type="button" id="exportBtn">Exporter les produits</button>
-          <label class="btn secondary full import-label" for="importFile">Importer un fichier JSON</label>
-          <input type="file" id="importFile" accept="application/json" hidden />
-          <button class="btn ghost full" type="button" id="resetBtn">Réinitialiser le catalogue</button>
-        </div>
-        <div class="admin-warning">
-          <strong>Important</strong>
-          <p>Cette version fonctionne sans base de données : les produits sont enregistrés dans un fichier JSON et les photos dans un dossier uploads. Pour Render, ajoutez un disque persistant afin de conserver les ajouts après redémarrage ou redéploiement.</p>
-        </div>
-      </aside>
     </section>
 
     <section class="admin-panel product-list-panel">

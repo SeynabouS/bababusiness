@@ -68,3 +68,17 @@ REMARQUE
 --------
 Sans base de données, cette solution est simple et suffisante pour une petite boutique.
 Pour beaucoup de produits, plusieurs administrateurs, ou beaucoup de trafic, une base de données ou un stockage cloud sera plus robuste.
+
+
+CATALOGUE PRODUITS DÉJÀ INTÉGRÉ
+-------------------------------
+Cette version contient déjà 39 produits avec leurs photos dans :
+assets/products/
+
+Les prix sont réglés sur 0 FCFA pour afficher « Prix sur demande ».
+Vous pouvez modifier les prix, descriptions et photos depuis :
+/admin.html
+
+Sur Render, les photos déjà présentes dans assets/products restent dans le projet.
+Les nouvelles photos ajoutées depuis l'admin seront enregistrées dans UPLOAD_DIR.
+Pour les garder après redémarrage, gardez le disque persistant /var/data.

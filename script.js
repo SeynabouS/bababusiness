@@ -17,6 +17,12 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const filters = document.querySelectorAll('.filter');
 const contactForm = document.getElementById('contactForm');
+const modalGallery = document.getElementById('modalGallery');
+const modalClose = document.getElementById('modalClose');
+const modalImage = document.getElementById('modalImage');
+const modalName = document.getElementById('modalName');
+const modalDesc = document.getElementById('modalDesc');
+const modalPrice = document.getElementById('modalPrice');
 
 function escapeHTML(value) {
   return String(value || '')
@@ -28,13 +34,16 @@ function escapeHTML(value) {
 }
 
 function formatPrice(price) {
-  return new Intl.NumberFormat('fr-FR').format(Number(price) || 0) + ' FCFA';
+  const amount = Number(price) || 0;
+  if (amount <= 0) return 'Prix sur demande';
+  return new Intl.NumberFormat('fr-FR').format(amount) + ' FCFA';
 }
 
 function getCategoryLabel(category) {
   const labels = {
     beaute: 'Beauté',
     parfum: 'Parfum',
+    hygiene: 'Hygiène',
     accessoire: 'Accessoire',
     bienetre: 'Bien-être',
     maison: 'Maison'
@@ -61,6 +70,24 @@ function getActiveFilter() {
   return active ? active.dataset.filter : 'all';
 }
 
+function openModal(product) {
+  if (!product.image) return;
+  
+  modalImage.src = product.image;
+  modalImage.alt = escapeHTML(product.name);
+  modalName.textContent = product.name;
+  modalDesc.textContent = product.desc;
+  modalPrice.textContent = formatPrice(product.price);
+  
+  modalGallery.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  modalGallery.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
 async function loadProductsFromServer() {
   if (!productGrid) return;
 
@@ -72,9 +99,16 @@ async function loadProductsFromServer() {
   `;
 
   try {
-    const response = await fetch('/api/products', { cache: 'no-store' });
+    let response = await fetch('/api/products', { cache: 'no-store' });
+
+    if (!response.ok) {
+      response = await fetch('/data/products.json', { cache: 'no-store' });
+    }
+
     if (!response.ok) throw new Error('Impossible de charger les produits.');
-    products = await response.json();
+
+    const data = await response.json();
+    products = Array.isArray(data) ? data : [];
     syncCartWithCatalog();
     renderProducts(getActiveFilter());
     renderCart();
@@ -118,7 +152,7 @@ function renderProducts(category = 'all') {
 
   productGrid.innerHTML = visibleProducts.map(product => `
     <article class="product-card reveal visible" data-category="${escapeHTML(product.category)}">
-      <div class="product-image">
+      <div class="product-image" ${product.image ? `data-product-id="${escapeHTML(product.id)}"` : ''}>
         <span class="badge">${getCategoryLabel(product.category)}</span>
         ${renderProductVisual(product)}
       </div>
@@ -133,8 +167,19 @@ function renderProducts(category = 'all') {
     </article>
   `).join('');
 
+  // Event listeners for adding to cart
   productGrid.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', () => addToCart(button.dataset.productId));
+  });
+
+  // Event listeners for opening modal on image click
+  productGrid.querySelectorAll('.product-image[data-product-id]').forEach(imageDiv => {
+    imageDiv.style.cursor = 'pointer';
+    imageDiv.addEventListener('click', () => {
+      const productId = imageDiv.dataset.productId;
+      const product = products.find(p => String(p.id) === String(productId));
+      if (product) openModal(product);
+    });
   });
 }
 
@@ -175,9 +220,10 @@ function renderCart() {
   if (!cartCount || !cartTotal || !cartItems || !whatsappOrder) return;
 
   const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
-  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const hasPriceOnRequest = cart.some(item => (Number(item.price) || 0) <= 0);
+  const total = cart.reduce((sum, item) => sum + (Number(item.price) || 0) * item.qty, 0);
   cartCount.textContent = totalItems;
-  cartTotal.textContent = formatPrice(total);
+  cartTotal.textContent = hasPriceOnRequest ? 'À confirmer' : formatPrice(total);
 
   if (cart.length === 0) {
     cartItems.innerHTML = '<p>Votre panier est vide. Ajoutez un produit pour préparer votre commande.</p>';
@@ -237,6 +283,19 @@ if (clearCart) clearCart.addEventListener('click', () => {
   cart = [];
   saveCart();
   renderCart();
+});
+
+// Modal event listeners
+if (modalClose) modalClose.addEventListener('click', closeModal);
+if (modalGallery) modalGallery.addEventListener('click', (e) => {
+  if (e.target === modalGallery) closeModal();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeModal();
+    closeCartPanel();
+  }
 });
 
 if (menuToggle && navLinks) {
