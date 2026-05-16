@@ -306,7 +306,7 @@ newProductBtn.addEventListener('click', resetForm);
 cancelEditBtn.addEventListener('click', resetForm);
 searchProduct.addEventListener('input', renderProductList);
 
-exportBtn.addEventListener('click', async () => {
+exportBtn?.addEventListener('click', async () => {
   try {
     const currentProducts = await apiFetch('/api/products');
     const blob = new Blob([JSON.stringify(currentProducts, null, 2)], { type: 'application/json' });
@@ -323,7 +323,7 @@ exportBtn.addEventListener('click', async () => {
   }
 });
 
-importFile.addEventListener('change', () => {
+importFile?.addEventListener('change', () => {
   const file = importFile.files[0];
   if (!file) return;
 
@@ -347,7 +347,7 @@ importFile.addEventListener('change', () => {
   importFile.value = '';
 });
 
-resetBtn.addEventListener('click', async () => {
+resetBtn?.addEventListener('click', async () => {
   const confirmReset = confirm('Réinitialiser le catalogue avec les produits par défaut ?');
   if (!confirmReset) return;
 
