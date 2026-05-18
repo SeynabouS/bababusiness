@@ -25,9 +25,6 @@ const cancelEditBtn = document.getElementById('cancelEditBtn');
 const productCounter = document.getElementById('productCounter');
 const adminProductList = document.getElementById('adminProductList');
 const searchProduct = document.getElementById('searchProduct');
-const exportBtn = document.getElementById('exportBtn');
-const importFile = document.getElementById('importFile');
-const resetBtn = document.getElementById('resetBtn');
 const toast = document.getElementById('toast');
 
 function escapeHTML(value) {
@@ -324,60 +321,6 @@ newProductBtn.addEventListener('click', resetForm);
 cancelEditBtn.addEventListener('click', resetForm);
 searchProduct.addEventListener('input', renderProductList);
 
-exportBtn?.addEventListener('click', async () => {
-  try {
-    const currentProducts = await apiFetch('/api/products');
-    const blob = new Blob([JSON.stringify(currentProducts, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    const date = new Date().toISOString().slice(0, 10);
-    link.href = url;
-    link.download = `catalogue-baba-business-${date}.json`;
-    link.click();
-    URL.revokeObjectURL(url);
-    showToast('Catalogue exporté.');
-  } catch (error) {
-    showToast(error.message);
-  }
-});
-
-importFile?.addEventListener('change', () => {
-  const file = importFile.files[0];
-  if (!file) return;
-
-  const reader = new FileReader();
-  reader.onload = async () => {
-    try {
-      const imported = JSON.parse(reader.result);
-      if (!Array.isArray(imported)) throw new Error('Format invalide');
-      products = await apiFetch('/api/products/import', {
-        method: 'POST',
-        body: JSON.stringify(imported)
-      });
-      renderProductList();
-      resetForm();
-      showToast('Catalogue importé avec succès.');
-    } catch (error) {
-      showToast('Le fichier importé n’est pas valide.');
-    }
-  };
-  reader.readAsText(file);
-  importFile.value = '';
-});
-
-resetBtn?.addEventListener('click', async () => {
-  const confirmReset = confirm('Réinitialiser le catalogue avec les produits par défaut ?');
-  if (!confirmReset) return;
-
-  try {
-    products = await apiFetch('/api/products/reset', { method: 'POST', body: JSON.stringify({}) });
-    renderProductList();
-    resetForm();
-    showToast('Catalogue réinitialisé.');
-  } catch (error) {
-    showToast(error.message);
-  }
-});
 
 loginForm.addEventListener('submit', async event => {
   event.preventDefault();
