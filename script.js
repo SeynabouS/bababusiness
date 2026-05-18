@@ -150,17 +150,17 @@ function renderProducts(category = 'all') {
   }
 
   productGrid.innerHTML = visibleProducts.map(product => `
-    <article class="product-card reveal visible" data-category="${escapeHTML(product.category)}">
+    <article class="product-card reveal visible ${product.outOfStock ? 'is-out-of-stock' : ''}" data-category="${escapeHTML(product.category)}">
       <div class="product-image" ${product.image ? `data-product-id="${escapeHTML(product.id)}"` : ''}>
-        <span class="badge">${getCategoryLabel(product.category)}</span>
+        <span class="badge">${product.outOfStock ? 'Rupture de stock' : getCategoryLabel(product.category)}</span>
         ${renderProductVisual(product)}
       </div>
       <div class="product-body">
         <h3>${escapeHTML(product.name)}</h3>
         <p>${escapeHTML(product.desc)}</p>
         <div class="price-row">
-          <span class="price">${formatPrice(product.price)}</span>
-          <button class="add-to-cart" type="button" aria-label="Ajouter ${escapeHTML(product.name)} au panier" data-product-id="${escapeHTML(product.id)}">+</button>
+          <span class="price">${product.outOfStock ? 'Rupture de stock' : formatPrice(product.price)}</span>
+          <button class="add-to-cart" type="button" aria-label="${product.outOfStock ? `${escapeHTML(product.name)} en rupture de stock` : `Ajouter ${escapeHTML(product.name)} au panier`}" data-product-id="${escapeHTML(product.id)}" ${product.outOfStock ? 'disabled' : ''}>+</button>
         </div>
       </div>
     </article>
@@ -189,6 +189,7 @@ function saveCart() {
 function addToCart(id) {
   const product = products.find(item => String(item.id) === String(id));
   if (!product) return;
+  if (product.outOfStock) return;
 
   const existing = cart.find(item => String(item.id) === String(id));
   if (existing) {

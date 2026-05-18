@@ -148,17 +148,19 @@ function renderProductList() {
   }
 
   adminProductList.innerHTML = filtered.map(product => `
-    <article class="admin-product-card">
+    <article class="admin-product-card ${product.outOfStock ? 'is-out-of-stock' : ''}">
       <div class="admin-product-thumb">
         ${productVisual(product)}
       </div>
       <div class="admin-product-info">
         <span class="admin-category">${getCategoryLabel(product.category)}</span>
+        ${product.outOfStock ? '<span class="stock-status out">Rupture de stock</span>' : '<span class="stock-status in">En stock</span>'}
         <h3>${escapeHTML(product.name)}</h3>
         <p>${escapeHTML(product.desc)}</p>
         <strong>${formatPrice(product.price)}</strong>
       </div>
       <div class="admin-product-actions">
+        <button class="btn ghost small" type="button" data-action="stock" data-id="${escapeHTML(product.id)}">${product.outOfStock ? 'Remettre en stock' : 'Mettre en rupture'}</button>
         <button class="btn secondary small" type="button" data-action="edit" data-id="${escapeHTML(product.id)}">Modifier</button>
         <button class="btn danger small" type="button" data-action="delete" data-id="${escapeHTML(product.id)}">Supprimer</button>
       </div>
@@ -168,6 +170,7 @@ function renderProductList() {
   adminProductList.querySelectorAll('button[data-action]').forEach(button => {
     button.addEventListener('click', () => {
       if (button.dataset.action === 'edit') editProduct(button.dataset.id);
+      if (button.dataset.action === 'stock') toggleProductStock(button.dataset.id);
       if (button.dataset.action === 'delete') deleteProduct(button.dataset.id);
     });
   });
@@ -224,6 +227,22 @@ async function deleteProduct(id) {
     showToast('Produit supprimé.');
   } catch (error) {
     showToast(error.message);
+  }
+}
+
+async function toggleProductStock(id) {
+  const product = products.find(item => String(item.id) === String(id));
+  if (!product) return;
+
+  try {
+    await apiFetch(`/api/products/${encodeURIComponent(id)}/stock`, {
+      method: 'PATCH',
+      body: JSON.stringify({ outOfStock: !product.outOfStock })
+    });
+    await loadProducts();
+    showToast(product.outOfStock ? 'Produit remis en stock.' : 'Produit marqué en rupture.');
+  } catch (error) {
+    showToast(error.message || 'Impossible de modifier le stock.');
   }
 }
 

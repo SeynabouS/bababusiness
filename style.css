@@ -313,6 +313,40 @@ h3 { font-size: 1.35rem; }
   transform: scale(0.95);
 }
 
+.product-card.is-out-of-stock {
+  opacity: .78;
+}
+
+.product-card.is-out-of-stock .product-image::after {
+  content: "Rupture";
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #b42318;
+  color: var(--white);
+  font-weight: 900;
+  font-size: .78rem;
+}
+
+.product-card.is-out-of-stock .price {
+  color: #b42318;
+}
+
+.add-to-cart:disabled {
+  cursor: not-allowed;
+  background: #cbd5e1;
+  color: #64748b;
+  box-shadow: none;
+  transform: none;
+}
+
+.add-to-cart:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 .promo { padding-top: 0; }
 .promo-card {
   display: flex;
@@ -845,6 +879,26 @@ footer img { width: 190px; }
   color: var(--blue);
   font-weight: 900;
   font-size: .78rem;
+}
+.stock-status {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: .78rem;
+}
+.stock-status.in {
+  background: #ecfdf3;
+  color: #027a48;
+}
+.stock-status.out {
+  background: #fff0f0;
+  color: #b42318;
+}
+.admin-product-card.is-out-of-stock {
+  border-color: rgba(180, 35, 24, .28);
+  background: #fffafa;
 }
 .admin-product-actions {
   display: flex;

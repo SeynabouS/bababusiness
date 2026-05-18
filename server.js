@@ -26,7 +26,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2500,
     "emoji": "🧴",
     "desc": "Lot de déodorants Ushuaïa aux senteurs grenade et vanille. Disponible selon arrivage.",
-    "image": "/assets/products/01-ushuaia-deodorants-grenade-et-vanille.jpeg"
+    "image": "/assets/products/01-ushuaia-deodorants-grenade-et-vanille.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p002",
@@ -35,7 +36,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2800,
     "emoji": "✨",
     "desc": "Brume parfumée scintillante In The Stars, format 236 ml.",
-    "image": "/assets/products/02-brume-in-the-stars-diamond-shimmer-mist.jpeg"
+    "image": "/assets/products/02-brume-in-the-stars-diamond-shimmer-mist.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p003",
@@ -44,7 +46,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2400,
     "emoji": "🌸",
     "desc": "Brume parfumée Twisted Fantasy, parfum doux et élégant pour le quotidien.",
-    "image": "/assets/products/03-brume-twisted-fantasy.jpeg"
+    "image": "/assets/products/03-brume-twisted-fantasy.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p004",
@@ -53,7 +56,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2900,
     "emoji": "🌙",
     "desc": "Brume parfumée If You Musk, senteur musquée chic et légère.",
-    "image": "/assets/products/04-brume-if-you-musk.jpeg"
+    "image": "/assets/products/04-brume-if-you-musk.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p005",
@@ -62,7 +66,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2900,
     "emoji": "🍬",
     "desc": "Brume parfumée rose Twisted Peppermint Dazzled, format 236 ml.",
-    "image": "/assets/products/05-brume-twisted-peppermint-dazzled.jpeg"
+    "image": "/assets/products/05-brume-twisted-peppermint-dazzled.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p006",
@@ -71,7 +76,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2500,
     "emoji": "💙",
     "desc": "Brume parfumée bleue Bath & Body Works, senteur fraîche et intense.",
-    "image": "/assets/products/06-brume-bleue-bath-et-body-works.jpeg"
+    "image": "/assets/products/06-brume-bleue-bath-et-body-works.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p007",
@@ -80,7 +86,8 @@ const DEFAULT_PRODUCTS = [
     "price": 4400,
     "emoji": "❄️",
     "desc": "Brume parfumée Snowflakes & Cashmere, senteur douce et réconfortante.",
-    "image": "/assets/products/07-brume-snowflakes-et-cashmere.jpeg"
+    "image": "/assets/products/07-brume-snowflakes-et-cashmere.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p008",
@@ -89,7 +96,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2400,
     "emoji": "🥥",
     "desc": "Brume parfumée Coconut Lime Verbena, senteur fraîche noix de coco et citron vert.",
-    "image": "/assets/products/08-brume-coconut-lime-verbena.jpeg"
+    "image": "/assets/products/08-brume-coconut-lime-verbena.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p009",
@@ -98,7 +106,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2900,
     "emoji": "🌿",
     "desc": "Brume parfumée Lost in Santal, senteur boisée et raffinée.",
-    "image": "/assets/products/09-brume-lost-in-santal.jpeg"
+    "image": "/assets/products/09-brume-lost-in-santal.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p010",
@@ -107,7 +116,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2300,
     "emoji": "🌷",
     "desc": "Brume parfumée Pure Wonder, senteur féminine délicate.",
-    "image": "/assets/products/10-brume-pure-wonder.jpeg"
+    "image": "/assets/products/10-brume-pure-wonder.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p011",
@@ -116,7 +126,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2800,
     "emoji": "❄️",
     "desc": "Brume parfumée Snowflakes & Cashmere, flacon vert, format 236 ml.",
-    "image": "/assets/products/11-brume-snowflakes-et-cashmere-verte.jpeg"
+    "image": "/assets/products/11-brume-snowflakes-et-cashmere-verte.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p012",
@@ -125,7 +136,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🍦",
     "desc": "Brume parfumée Warm Vanilla Sugar, senteur vanille gourmande.",
-    "image": "/assets/products/12-brume-warm-vanilla-sugar.jpeg"
+    "image": "/assets/products/12-brume-warm-vanilla-sugar.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p013",
@@ -134,7 +146,8 @@ const DEFAULT_PRODUCTS = [
     "price": 3300,
     "emoji": "💗",
     "desc": "Brume parfumée Pink Obsessed, flacon rose, format 236 ml.",
-    "image": "/assets/products/13-brume-pink-obsessed.jpeg"
+    "image": "/assets/products/13-brume-pink-obsessed.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p014",
@@ -143,7 +156,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🌸",
     "desc": "Brume parfumée Japanese Cherry Blossom, senteur florale élégante.",
-    "image": "/assets/products/14-brume-japanese-cherry-blossom.jpeg"
+    "image": "/assets/products/14-brume-japanese-cherry-blossom.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p015",
@@ -152,7 +166,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🧴",
     "desc": "Déodorant Nivea Fresh Energy anti-transpirant, protection 48h.",
-    "image": "/assets/products/15-deodorant-nivea-fresh-energy.jpeg"
+    "image": "/assets/products/15-deodorant-nivea-fresh-energy.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p016",
@@ -161,7 +176,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2500,
     "emoji": "🧴",
     "desc": "Déodorant Nivea Men Fresh Power, protection longue durée.",
-    "image": "/assets/products/16-deodorant-nivea-men-fresh-power.jpeg"
+    "image": "/assets/products/16-deodorant-nivea-men-fresh-power.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p017",
@@ -170,7 +186,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2400,
     "emoji": "✨",
     "desc": "Brume parfumée scintillante Into The Night, format 236 ml.",
-    "image": "/assets/products/17-brume-into-the-night-diamond-shimmer-mist.jpeg"
+    "image": "/assets/products/17-brume-into-the-night-diamond-shimmer-mist.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p018",
@@ -179,7 +196,8 @@ const DEFAULT_PRODUCTS = [
     "price": 2800,
     "emoji": "🌺",
     "desc": "Brume parfumée Floral Fantasy, senteur florale intense.",
-    "image": "/assets/products/18-brume-floral-fantasy.jpeg"
+    "image": "/assets/products/18-brume-floral-fantasy.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p019",
@@ -188,7 +206,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🌼",
     "desc": "Brume parfumée Brightest Bloom, senteur florale et lumineuse.",
-    "image": "/assets/products/19-brume-brightest-bloom.jpeg"
+    "image": "/assets/products/19-brume-brightest-bloom.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p020",
@@ -197,7 +216,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🌙",
     "desc": "Brume parfumée Into The Night, senteur élégante et intense.",
-    "image": "/assets/products/20-brume-into-the-night.jpeg"
+    "image": "/assets/products/20-brume-into-the-night.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p021",
@@ -206,7 +226,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "💙",
     "desc": "Brume parfumée Gingham, senteur fraîche et légère.",
-    "image": "/assets/products/21-brume-gingham.jpeg"
+    "image": "/assets/products/21-brume-gingham.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p022",
@@ -215,7 +236,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🍬",
     "desc": "Brume parfumée Twisted Peppermint, senteur fraîche et sucrée.",
-    "image": "/assets/products/22-brume-twisted-peppermint.jpeg"
+    "image": "/assets/products/22-brume-twisted-peppermint.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p023",
@@ -224,7 +246,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "💗",
     "desc": "Brume parfumée Gingham Gorgeous, flacon rose, format 236 ml.",
-    "image": "/assets/products/23-brume-gingham-gorgeous.jpeg"
+    "image": "/assets/products/23-brume-gingham-gorgeous.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p024",
@@ -233,7 +256,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "⭐",
     "desc": "Brume parfumée In The Stars, senteur chic et lumineuse.",
-    "image": "/assets/products/24-brume-in-the-stars.jpeg"
+    "image": "/assets/products/24-brume-in-the-stars.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p025",
@@ -242,7 +266,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🌈",
     "desc": "Brume parfumée Musk, senteur musquée multicolore.",
-    "image": "/assets/products/25-brume-musk.jpeg"
+    "image": "/assets/products/25-brume-musk.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p026",
@@ -251,7 +276,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🧴",
     "desc": "Déodorant Nivea Pure Invisible anti-transpirant, protection 48h.",
-    "image": "/assets/products/26-deodorant-nivea-pure-invisible.jpeg"
+    "image": "/assets/products/26-deodorant-nivea-pure-invisible.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p027",
@@ -260,7 +286,8 @@ const DEFAULT_PRODUCTS = [
     "price": 3000,
     "emoji": "🌿",
     "desc": "Déodorant Vaseline Aloe Sensitive, protection 48h.",
-    "image": "/assets/products/27-deodorant-vaseline-aloe-sensitive.jpeg"
+    "image": "/assets/products/27-deodorant-vaseline-aloe-sensitive.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p028",
@@ -269,7 +296,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🧴",
     "desc": "Déodorant Nivea Protect & Care, protection 48h.",
-    "image": "/assets/products/28-deodorant-nivea-protect-et-care.jpeg"
+    "image": "/assets/products/28-deodorant-nivea-protect-et-care.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p029",
@@ -278,7 +306,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🪥",
     "desc": "Dentifrice Colgate Kids Big Smiles pour enfants de 6 à 9 ans.",
-    "image": "/assets/products/29-dentifrice-colgate-kids-big-smiles-6-9-ans.jpeg"
+    "image": "/assets/products/29-dentifrice-colgate-kids-big-smiles-6-9-ans.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p030",
@@ -287,7 +316,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "⚫",
     "desc": "Déodorant Adidas Victory League Deo Body Spray, format 150 ml.",
-    "image": "/assets/products/30-deodorant-adidas-victory-league.jpeg"
+    "image": "/assets/products/30-deodorant-adidas-victory-league.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p031",
@@ -296,7 +326,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🌸",
     "desc": "Déodorant Monsavon Mon Déo, senteur thé vert et fleur de lotus.",
-    "image": "/assets/products/31-deodorant-monsavon-the-vert-et-fleur-de-lotus.jpeg"
+    "image": "/assets/products/31-deodorant-monsavon-the-vert-et-fleur-de-lotus.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p032",
@@ -305,7 +336,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "💧",
     "desc": "Déodorant Vaseline Active Fresh, protection 48h.",
-    "image": "/assets/products/32-deodorant-vaseline-active-fresh.jpeg"
+    "image": "/assets/products/32-deodorant-vaseline-active-fresh.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p033",
@@ -314,7 +346,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "☀️",
     "desc": "Brume parfumée Gingham Glow, senteur chaude et lumineuse.",
-    "image": "/assets/products/33-brume-gingham-glow.jpeg"
+    "image": "/assets/products/33-brume-gingham-glow.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p034",
@@ -323,7 +356,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🧴",
     "desc": "Pack de deux déodorants Nivea Men Protect & Care, protection 48h.",
-    "image": "/assets/products/34-duo-nivea-men-protect-et-care.jpeg"
+    "image": "/assets/products/34-duo-nivea-men-protect-et-care.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p035",
@@ -332,7 +366,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "❤️",
     "desc": "Déodorant Monsavon au lait, senteur grenade énergisante.",
-    "image": "/assets/products/35-deodorant-monsavon-grenade-energisant.jpeg"
+    "image": "/assets/products/35-deodorant-monsavon-grenade-energisant.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p036",
@@ -341,7 +376,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "⚫",
     "desc": "Déodorant Nivea Men Black & White Invisible Original, protection 48h.",
-    "image": "/assets/products/36-deodorant-nivea-men-black-et-white-invisible.jpeg"
+    "image": "/assets/products/36-deodorant-nivea-men-black-et-white-invisible.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p037",
@@ -350,7 +386,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🪥",
     "desc": "Dentifrice Colgate Natural White, format 75 ml.",
-    "image": "/assets/products/37-dentifrice-colgate-natural.jpeg"
+    "image": "/assets/products/37-dentifrice-colgate-natural.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p038",
@@ -359,7 +396,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🧴",
     "desc": "Déodorant Nivea Men Sensitive Protect, protection 48h.",
-    "image": "/assets/products/38-deodorant-nivea-men-sensitive-protect.jpeg"
+    "image": "/assets/products/38-deodorant-nivea-men-sensitive-protect.jpeg",
+    "outOfStock": false
   },
   {
     "id": "p039",
@@ -368,7 +406,8 @@ const DEFAULT_PRODUCTS = [
     "price": 0,
     "emoji": "🚿",
     "desc": "Douche soin gommante Ushuaïa Hammam au savon noir et huile d’argan.",
-    "image": "/assets/products/39-gel-douche-ushuaia-hammam-argan.jpeg"
+    "image": "/assets/products/39-gel-douche-ushuaia-hammam-argan.jpeg",
+    "outOfStock": false
   }
 ];
 
@@ -422,7 +461,8 @@ function normalizeProduct(product) {
     price: Number(product.price) || 0,
     emoji: String(product.emoji || '🛍️').trim() || '🛍️',
     desc: String(product.desc || '').trim(),
-    image: String(product.image || '').trim()
+    image: String(product.image || '').trim(),
+    outOfStock: Boolean(product.outOfStock)
   };
 }
 
@@ -589,6 +629,26 @@ app.put('/api/products/:id', requireAdmin, upload.single('imageFile'), async (re
     products[index] = updated;
     await writeProducts(products);
     res.json(updated);
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.patch('/api/products/:id/stock', requireAdmin, async (req, res, next) => {
+  try {
+    const products = await readProducts();
+    const index = products.findIndex(product => String(product.id) === String(req.params.id));
+    if (index === -1) {
+      return res.status(404).json({ error: 'Produit introuvable.' });
+    }
+
+    products[index] = normalizeProduct({
+      ...products[index],
+      outOfStock: Boolean(req.body.outOfStock)
+    });
+
+    await writeProducts(products);
+    res.json(products[index]);
   } catch (error) {
     next(error);
   }
