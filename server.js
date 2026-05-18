@@ -22,8 +22,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p001",
     "name": "Ushuaïa Déodorants Grenade & Vanille",
-    "category": "hygiene",
-    "price": 0,
+    "category": "deodorants_femmes",
+    "price": 2500,
     "emoji": "🧴",
     "desc": "Lot de déodorants Ushuaïa aux senteurs grenade et vanille. Disponible selon arrivage.",
     "image": "/assets/products/01-ushuaia-deodorants-grenade-et-vanille.jpeg"
@@ -31,8 +31,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p002",
     "name": "Brume In The Stars Diamond Shimmer Mist",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 2800,
     "emoji": "✨",
     "desc": "Brume parfumée scintillante In The Stars, format 236 ml.",
     "image": "/assets/products/02-brume-in-the-stars-diamond-shimmer-mist.jpeg"
@@ -40,8 +40,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p003",
     "name": "Brume Twisted Fantasy",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 2400,
     "emoji": "🌸",
     "desc": "Brume parfumée Twisted Fantasy, parfum doux et élégant pour le quotidien.",
     "image": "/assets/products/03-brume-twisted-fantasy.jpeg"
@@ -49,8 +49,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p004",
     "name": "Brume If You Musk",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 2900,
     "emoji": "🌙",
     "desc": "Brume parfumée If You Musk, senteur musquée chic et légère.",
     "image": "/assets/products/04-brume-if-you-musk.jpeg"
@@ -58,8 +58,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p005",
     "name": "Brume Twisted Peppermint Dazzled",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 2900,
     "emoji": "🍬",
     "desc": "Brume parfumée rose Twisted Peppermint Dazzled, format 236 ml.",
     "image": "/assets/products/05-brume-twisted-peppermint-dazzled.jpeg"
@@ -67,8 +67,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p006",
     "name": "Brume bleue Bath & Body Works",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 2500,
     "emoji": "💙",
     "desc": "Brume parfumée bleue Bath & Body Works, senteur fraîche et intense.",
     "image": "/assets/products/06-brume-bleue-bath-et-body-works.jpeg"
@@ -76,8 +76,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p007",
     "name": "Brume Snowflakes & Cashmere",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 4400,
     "emoji": "❄️",
     "desc": "Brume parfumée Snowflakes & Cashmere, senteur douce et réconfortante.",
     "image": "/assets/products/07-brume-snowflakes-et-cashmere.jpeg"
@@ -85,8 +85,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p008",
     "name": "Brume Coconut Lime Verbena",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 2400,
     "emoji": "🥥",
     "desc": "Brume parfumée Coconut Lime Verbena, senteur fraîche noix de coco et citron vert.",
     "image": "/assets/products/08-brume-coconut-lime-verbena.jpeg"
@@ -94,8 +94,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p009",
     "name": "Brume Lost in Santal",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 2900,
     "emoji": "🌿",
     "desc": "Brume parfumée Lost in Santal, senteur boisée et raffinée.",
     "image": "/assets/products/09-brume-lost-in-santal.jpeg"
@@ -103,8 +103,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p010",
     "name": "Brume Pure Wonder",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 2300,
     "emoji": "🌷",
     "desc": "Brume parfumée Pure Wonder, senteur féminine délicate.",
     "image": "/assets/products/10-brume-pure-wonder.jpeg"
@@ -112,8 +112,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p011",
     "name": "Brume Snowflakes & Cashmere verte",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 2800,
     "emoji": "❄️",
     "desc": "Brume parfumée Snowflakes & Cashmere, flacon vert, format 236 ml.",
     "image": "/assets/products/11-brume-snowflakes-et-cashmere-verte.jpeg"
@@ -121,7 +121,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p012",
     "name": "Brume Warm Vanilla Sugar",
-    "category": "parfum",
+    "category": "brumes",
     "price": 0,
     "emoji": "🍦",
     "desc": "Brume parfumée Warm Vanilla Sugar, senteur vanille gourmande.",
@@ -130,8 +130,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p013",
     "name": "Brume Pink Obsessed",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 3300,
     "emoji": "💗",
     "desc": "Brume parfumée Pink Obsessed, flacon rose, format 236 ml.",
     "image": "/assets/products/13-brume-pink-obsessed.jpeg"
@@ -139,7 +139,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p014",
     "name": "Brume Japanese Cherry Blossom",
-    "category": "parfum",
+    "category": "brumes",
     "price": 0,
     "emoji": "🌸",
     "desc": "Brume parfumée Japanese Cherry Blossom, senteur florale élégante.",
@@ -148,7 +148,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p015",
     "name": "Déodorant Nivea Fresh Energy",
-    "category": "hygiene",
+    "category": "deodorants_femmes",
     "price": 0,
     "emoji": "🧴",
     "desc": "Déodorant Nivea Fresh Energy anti-transpirant, protection 48h.",
@@ -157,8 +157,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p016",
     "name": "Déodorant Nivea Men Fresh Power",
-    "category": "hygiene",
-    "price": 0,
+    "category": "deodorants_hommes",
+    "price": 2500,
     "emoji": "🧴",
     "desc": "Déodorant Nivea Men Fresh Power, protection longue durée.",
     "image": "/assets/products/16-deodorant-nivea-men-fresh-power.jpeg"
@@ -166,8 +166,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p017",
     "name": "Brume Into The Night Diamond Shimmer Mist",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 2400,
     "emoji": "✨",
     "desc": "Brume parfumée scintillante Into The Night, format 236 ml.",
     "image": "/assets/products/17-brume-into-the-night-diamond-shimmer-mist.jpeg"
@@ -175,8 +175,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p018",
     "name": "Brume Floral Fantasy",
-    "category": "parfum",
-    "price": 0,
+    "category": "brumes",
+    "price": 2800,
     "emoji": "🌺",
     "desc": "Brume parfumée Floral Fantasy, senteur florale intense.",
     "image": "/assets/products/18-brume-floral-fantasy.jpeg"
@@ -184,7 +184,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p019",
     "name": "Brume Brightest Bloom",
-    "category": "parfum",
+    "category": "brumes",
     "price": 0,
     "emoji": "🌼",
     "desc": "Brume parfumée Brightest Bloom, senteur florale et lumineuse.",
@@ -193,7 +193,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p020",
     "name": "Brume Into The Night",
-    "category": "parfum",
+    "category": "brumes",
     "price": 0,
     "emoji": "🌙",
     "desc": "Brume parfumée Into The Night, senteur élégante et intense.",
@@ -202,7 +202,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p021",
     "name": "Brume Gingham",
-    "category": "parfum",
+    "category": "brumes",
     "price": 0,
     "emoji": "💙",
     "desc": "Brume parfumée Gingham, senteur fraîche et légère.",
@@ -211,7 +211,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p022",
     "name": "Brume Twisted Peppermint",
-    "category": "parfum",
+    "category": "brumes",
     "price": 0,
     "emoji": "🍬",
     "desc": "Brume parfumée Twisted Peppermint, senteur fraîche et sucrée.",
@@ -220,7 +220,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p023",
     "name": "Brume Gingham Gorgeous",
-    "category": "parfum",
+    "category": "brumes",
     "price": 0,
     "emoji": "💗",
     "desc": "Brume parfumée Gingham Gorgeous, flacon rose, format 236 ml.",
@@ -229,7 +229,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p024",
     "name": "Brume In The Stars",
-    "category": "parfum",
+    "category": "brumes",
     "price": 0,
     "emoji": "⭐",
     "desc": "Brume parfumée In The Stars, senteur chic et lumineuse.",
@@ -238,7 +238,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p025",
     "name": "Brume Musk",
-    "category": "parfum",
+    "category": "brumes",
     "price": 0,
     "emoji": "🌈",
     "desc": "Brume parfumée Musk, senteur musquée multicolore.",
@@ -247,7 +247,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p026",
     "name": "Déodorant Nivea Pure Invisible",
-    "category": "hygiene",
+    "category": "deodorants_femmes",
     "price": 0,
     "emoji": "🧴",
     "desc": "Déodorant Nivea Pure Invisible anti-transpirant, protection 48h.",
@@ -256,8 +256,8 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p027",
     "name": "Déodorant Vaseline Aloe Sensitive",
-    "category": "hygiene",
-    "price": 0,
+    "category": "deodorants_femmes",
+    "price": 3000,
     "emoji": "🌿",
     "desc": "Déodorant Vaseline Aloe Sensitive, protection 48h.",
     "image": "/assets/products/27-deodorant-vaseline-aloe-sensitive.jpeg"
@@ -265,7 +265,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p028",
     "name": "Déodorant Nivea Protect & Care",
-    "category": "hygiene",
+    "category": "deodorants_femmes",
     "price": 0,
     "emoji": "🧴",
     "desc": "Déodorant Nivea Protect & Care, protection 48h.",
@@ -274,7 +274,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p029",
     "name": "Dentifrice Colgate Kids Big Smiles 6-9 ans",
-    "category": "hygiene",
+    "category": "soins_bucco_dentaire",
     "price": 0,
     "emoji": "🪥",
     "desc": "Dentifrice Colgate Kids Big Smiles pour enfants de 6 à 9 ans.",
@@ -283,7 +283,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p030",
     "name": "Déodorant Adidas Victory League",
-    "category": "hygiene",
+    "category": "deodorants_hommes",
     "price": 0,
     "emoji": "⚫",
     "desc": "Déodorant Adidas Victory League Deo Body Spray, format 150 ml.",
@@ -292,7 +292,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p031",
     "name": "Déodorant Monsavon Thé Vert & Fleur de Lotus",
-    "category": "hygiene",
+    "category": "deodorants_femmes",
     "price": 0,
     "emoji": "🌸",
     "desc": "Déodorant Monsavon Mon Déo, senteur thé vert et fleur de lotus.",
@@ -301,7 +301,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p032",
     "name": "Déodorant Vaseline Active Fresh",
-    "category": "hygiene",
+    "category": "deodorants_femmes",
     "price": 0,
     "emoji": "💧",
     "desc": "Déodorant Vaseline Active Fresh, protection 48h.",
@@ -310,7 +310,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p033",
     "name": "Brume Gingham Glow",
-    "category": "parfum",
+    "category": "brumes",
     "price": 0,
     "emoji": "☀️",
     "desc": "Brume parfumée Gingham Glow, senteur chaude et lumineuse.",
@@ -319,7 +319,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p034",
     "name": "Duo Nivea Men Protect & Care",
-    "category": "hygiene",
+    "category": "lait_corps",
     "price": 0,
     "emoji": "🧴",
     "desc": "Pack de deux déodorants Nivea Men Protect & Care, protection 48h.",
@@ -328,7 +328,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p035",
     "name": "Déodorant Monsavon Grenade Energisant",
-    "category": "hygiene",
+    "category": "deodorants_femmes",
     "price": 0,
     "emoji": "❤️",
     "desc": "Déodorant Monsavon au lait, senteur grenade énergisante.",
@@ -337,7 +337,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p036",
     "name": "Déodorant Nivea Men Black & White Invisible",
-    "category": "hygiene",
+    "category": "deodorants_hommes",
     "price": 0,
     "emoji": "⚫",
     "desc": "Déodorant Nivea Men Black & White Invisible Original, protection 48h.",
@@ -346,7 +346,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p037",
     "name": "Dentifrice Colgate Natural",
-    "category": "hygiene",
+    "category": "soins_bucco_dentaire",
     "price": 0,
     "emoji": "🪥",
     "desc": "Dentifrice Colgate Natural White, format 75 ml.",
@@ -355,7 +355,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p038",
     "name": "Déodorant Nivea Men Sensitive Protect",
-    "category": "hygiene",
+    "category": "deodorants_hommes",
     "price": 0,
     "emoji": "🧴",
     "desc": "Déodorant Nivea Men Sensitive Protect, protection 48h.",
@@ -364,7 +364,7 @@ const DEFAULT_PRODUCTS = [
   {
     "id": "p039",
     "name": "Gel douche Ushuaïa Hammam Argan",
-    "category": "hygiene",
+    "category": "lait_corps",
     "price": 0,
     "emoji": "🚿",
     "desc": "Douche soin gommante Ushuaïa Hammam au savon noir et huile d’argan.",
@@ -418,7 +418,7 @@ function normalizeProduct(product) {
   return {
     id: String(product.id || `p-${Date.now()}-${crypto.randomBytes(4).toString('hex')}`),
     name: String(product.name || 'Produit sans nom').trim(),
-    category: String(product.category || 'maison').trim(),
+    category: String(product.category || 'deodorants_femmes').trim(),
     price: Number(product.price) || 0,
     emoji: String(product.emoji || '🛍️').trim() || '🛍️',
     desc: String(product.desc || '').trim(),

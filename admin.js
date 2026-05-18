@@ -47,12 +47,11 @@ function formatPrice(price) {
 
 function getCategoryLabel(category) {
   const labels = {
-    beaute: 'Beauté',
-    parfum: 'Parfums',
-    hygiene: 'Hygiène',
-    accessoire: 'Accessoires',
-    bienetre: 'Bien-être',
-    maison: 'Maison / Bazar'
+    deodorants_femmes: 'Déodorants Femmes',
+    deodorants_hommes: 'Déodorants Hommes',
+    brumes: 'Brumes',
+    soins_bucco_dentaire: 'Soins bucco-dentaire',
+    lait_corps: 'Lait de corps'
   };
   return labels[category] || 'Produit';
 }
