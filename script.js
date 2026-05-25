@@ -23,6 +23,13 @@ const modalImage = document.getElementById('modalImage');
 const modalName = document.getElementById('modalName');
 const modalDesc = document.getElementById('modalDesc');
 const modalPrice = document.getElementById('modalPrice');
+const featuredCarousel = document.getElementById('featuredCarousel');
+const carouselDots = document.getElementById('carouselDots');
+const carouselPrev = document.getElementById('carouselPrev');
+const carouselNext = document.getElementById('carouselNext');
+let featuredProducts = [];
+let carouselIndex = 0;
+let carouselTimer = null;
 
 function escapeHTML(value) {
   return String(value || '')
@@ -69,6 +76,106 @@ function getActiveFilter() {
   return active ? active.dataset.filter : 'all';
 }
 
+function getFeaturedProducts() {
+  const priorityCategories = ['brumes', 'deodorants_femmes', 'deodorants_hommes', 'soins_bucco_dentaire'];
+  return products
+    .filter(product => product.image && !product.outOfStock)
+    .sort((first, second) => {
+      const firstCategory = priorityCategories.indexOf(first.category);
+      const secondCategory = priorityCategories.indexOf(second.category);
+      return (firstCategory === -1 ? 99 : firstCategory) - (secondCategory === -1 ? 99 : secondCategory);
+    })
+    .slice(0, 6);
+}
+
+function updateCarousel() {
+  if (!featuredCarousel || featuredProducts.length === 0) return;
+
+  featuredCarousel.style.transform = `translateX(-${carouselIndex * 100}%)`;
+
+  if (carouselDots) {
+    carouselDots.querySelectorAll('button').forEach((button, index) => {
+      button.classList.toggle('active', index === carouselIndex);
+      button.setAttribute('aria-current', index === carouselIndex ? 'true' : 'false');
+    });
+  }
+}
+
+function goToCarouselSlide(index) {
+  if (featuredProducts.length === 0) return;
+  carouselIndex = (index + featuredProducts.length) % featuredProducts.length;
+  updateCarousel();
+}
+
+function stopCarouselAutoplay() {
+  if (carouselTimer) window.clearInterval(carouselTimer);
+  carouselTimer = null;
+}
+
+function startCarouselAutoplay() {
+  stopCarouselAutoplay();
+  if (featuredProducts.length <= 1) return;
+  carouselTimer = window.setInterval(() => goToCarouselSlide(carouselIndex + 1), 5200);
+}
+
+function renderFeaturedCarousel() {
+  if (!featuredCarousel) return;
+
+  featuredProducts = getFeaturedProducts();
+  carouselIndex = 0;
+
+  if (featuredProducts.length === 0) {
+    featuredCarousel.innerHTML = `
+      <article class="carousel-slide">
+        <div class="carousel-info">
+          <p class="eyebrow">Baba Business</p>
+          <h3>Catalogue bientôt disponible</h3>
+          <p>Les produits mis en avant apparaîtront ici dès que le catalogue sera chargé.</p>
+        </div>
+      </article>
+    `;
+    if (carouselDots) carouselDots.innerHTML = '';
+    return;
+  }
+
+  featuredCarousel.innerHTML = featuredProducts.map(product => `
+    <article class="carousel-slide">
+      <div class="carousel-image">
+        <img src="${escapeHTML(product.image)}" alt="${escapeHTML(product.name)}" loading="lazy" />
+      </div>
+      <div class="carousel-info">
+        <span class="carousel-tag">${escapeHTML(getCategoryLabel(product.category))}</span>
+        <h3>${escapeHTML(product.name)}</h3>
+        <p>${escapeHTML(product.desc)}</p>
+        <div class="carousel-actions">
+          <strong>${escapeHTML(formatPrice(product.price))}</strong>
+          <button class="btn primary carousel-add" type="button" data-product-id="${escapeHTML(product.id)}">Ajouter au panier</button>
+        </div>
+      </div>
+    </article>
+  `).join('');
+
+  if (carouselDots) {
+    carouselDots.innerHTML = featuredProducts.map((product, index) => `
+      <button type="button" aria-label="Voir ${escapeHTML(product.name)}" data-slide="${index}"></button>
+    `).join('');
+
+    carouselDots.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', () => {
+        goToCarouselSlide(Number(button.dataset.slide));
+        startCarouselAutoplay();
+      });
+    });
+  }
+
+  featuredCarousel.querySelectorAll('.carousel-add').forEach(button => {
+    button.addEventListener('click', () => addToCart(button.dataset.productId));
+  });
+
+  updateCarousel();
+  startCarouselAutoplay();
+}
+
 function openModal(product) {
   if (!product.image) return;
   
@@ -109,6 +216,7 @@ async function loadProductsFromServer() {
     const data = await response.json();
     products = Array.isArray(data) ? data : [];
     syncCartWithCatalog();
+    renderFeaturedCarousel();
     renderProducts(getActiveFilter());
     renderCart();
   } catch (error) {
@@ -284,6 +392,25 @@ if (clearCart) clearCart.addEventListener('click', () => {
   saveCart();
   renderCart();
 });
+
+if (carouselPrev) {
+  carouselPrev.addEventListener('click', () => {
+    goToCarouselSlide(carouselIndex - 1);
+    startCarouselAutoplay();
+  });
+}
+
+if (carouselNext) {
+  carouselNext.addEventListener('click', () => {
+    goToCarouselSlide(carouselIndex + 1);
+    startCarouselAutoplay();
+  });
+}
+
+if (featuredCarousel) {
+  featuredCarousel.addEventListener('mouseenter', stopCarouselAutoplay);
+  featuredCarousel.addEventListener('mouseleave', startCarouselAutoplay);
+}
 
 // Modal event listeners
 if (modalClose) modalClose.addEventListener('click', closeModal);
