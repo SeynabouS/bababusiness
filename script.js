@@ -87,6 +87,12 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
+async function fetchProductsJson(url) {
+  const response = await fetch(url, { cache: 'no-store' });
+  if (!response.ok) throw new Error(`Catalogue indisponible: ${response.status}`);
+  return response.json();
+}
+
 async function loadProductsFromServer() {
   if (!productGrid) return;
 
@@ -98,15 +104,13 @@ async function loadProductsFromServer() {
   `;
 
   try {
-    let response = await fetch('/api/products', { cache: 'no-store' });
-
-    if (!response.ok) {
-      response = await fetch('/data/products.json', { cache: 'no-store' });
+    let data;
+    try {
+      data = await fetchProductsJson('/api/products');
+    } catch (apiError) {
+      data = await fetchProductsJson('/data/products.json');
     }
 
-    if (!response.ok) throw new Error('Impossible de charger les produits.');
-
-    const data = await response.json();
     products = Array.isArray(data) ? data : [];
     syncCartWithCatalog();
     renderProducts(getActiveFilter());
