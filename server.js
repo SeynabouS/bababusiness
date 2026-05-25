@@ -411,6 +411,8 @@ const DEFAULT_PRODUCTS = [
   }
 ];
 
+const DEFAULT_PRODUCTS_BY_ID = new Map(DEFAULT_PRODUCTS.map(product => [String(product.id), product]));
+
 function sign(value) {
   return crypto.createHmac('sha256', ADMIN_SECRET).update(value).digest('base64url');
 }
@@ -471,6 +473,27 @@ async function ensureStorage() {
   await fsp.mkdir(UPLOAD_DIR, { recursive: true });
 
   if (!fs.existsSync(PRODUCTS_FILE)) {
+    await writeProducts(DEFAULT_PRODUCTS);
+    return;
+  }
+
+  try {
+    const raw = await fsp.readFile(PRODUCTS_FILE, 'utf8');
+    const products = JSON.parse(raw);
+    if (!Array.isArray(products)) return;
+
+    let updated = false;
+    const migratedProducts = products.map(product => {
+      const defaultProduct = DEFAULT_PRODUCTS_BY_ID.get(String(product.id));
+      if (!defaultProduct || product.desc === defaultProduct.desc) return product;
+      updated = true;
+      return { ...product, desc: defaultProduct.desc };
+    });
+
+    if (updated) {
+      await writeProducts(migratedProducts);
+    }
+  } catch (error) {
     await writeProducts(DEFAULT_PRODUCTS);
   }
 }
