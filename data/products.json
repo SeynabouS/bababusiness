@@ -5,7 +5,7 @@
     "category": "deodorants_femmes",
     "price": 2500,
     "emoji": "🧴",
-    "desc": "Lot de déodorants Ushuaïa aux senteurs grenade et vanille. Disponible selon arrivage.",
+    "desc": "Un duo de déodorants Ushuaïa aux notes grenade et vanille, idéal pour varier entre fraîcheur fruitée et douceur gourmande au quotidien.",
     "image": "/assets/products/01-ushuaia-deodorants-grenade-et-vanille.jpeg",
     "outOfStock": false
   },
@@ -15,7 +15,7 @@
     "category": "brumes",
     "price": 2800,
     "emoji": "✨",
-    "desc": "Brume parfumée scintillante In The Stars, format 236 ml.",
+    "desc": "Une brume scintillante In The Stars qui parfume délicatement la peau et laisse un voile lumineux pour sublimer vos sorties comme vos journées.",
     "image": "/assets/products/02-brume-in-the-stars-diamond-shimmer-mist.jpeg",
     "outOfStock": false
   },
@@ -25,7 +25,7 @@
     "category": "brumes",
     "price": 2400,
     "emoji": "🌸",
-    "desc": "Brume parfumée Twisted Fantasy, parfum doux et élégant pour le quotidien.",
+    "desc": "Twisted Fantasy apporte une touche parfumée douce, féminine et facile à porter, parfaite pour se sentir fraîche du matin au soir.",
     "image": "/assets/products/03-brume-twisted-fantasy.jpeg",
     "outOfStock": false
   },
@@ -35,7 +35,7 @@
     "category": "brumes",
     "price": 2900,
     "emoji": "🌙",
-    "desc": "Brume parfumée If You Musk, senteur musquée chic et légère.",
+    "desc": "If You Musk révèle une senteur musquée chic et discrète, pensée pour celles qui aiment les parfums propres, élégants et modernes.",
     "image": "/assets/products/04-brume-if-you-musk.jpeg",
     "outOfStock": false
   },
@@ -45,7 +45,7 @@
     "category": "brumes",
     "price": 2900,
     "emoji": "🍬",
-    "desc": "Brume parfumée rose Twisted Peppermint Dazzled, format 236 ml.",
+    "desc": "Twisted Peppermint Dazzled mêle fraîcheur sucrée et fini scintillant pour une brume pétillante qui attire subtilement la lumière.",
     "image": "/assets/products/05-brume-twisted-peppermint-dazzled.jpeg",
     "outOfStock": false
   },
@@ -55,7 +55,7 @@
     "category": "brumes",
     "price": 2500,
     "emoji": "💙",
-    "desc": "Brume parfumée bleue Bath & Body Works, senteur fraîche et intense.",
+    "desc": "Une brume Bath & Body Works au flacon bleu, fraîche et présente, parfaite pour donner du caractère à votre routine parfumée.",
     "image": "/assets/products/06-brume-bleue-bath-et-body-works.jpeg",
     "outOfStock": false
   },
@@ -65,7 +65,7 @@
     "category": "brumes",
     "price": 4400,
     "emoji": "❄️",
-    "desc": "Brume parfumée Snowflakes & Cashmere, senteur douce et réconfortante.",
+    "desc": "Snowflakes & Cashmere enveloppe la peau d'une senteur douce, chaleureuse et réconfortante, idéale pour un parfum cocooning très féminin.",
     "image": "/assets/products/07-brume-snowflakes-et-cashmere.jpeg",
     "outOfStock": false
   },
@@ -75,7 +75,7 @@
     "category": "brumes",
     "price": 2400,
     "emoji": "🥥",
-    "desc": "Brume parfumée Coconut Lime Verbena, senteur fraîche noix de coco et citron vert.",
+    "desc": "Coconut Lime Verbena associe la douceur de la noix de coco à l'énergie du citron vert pour une sensation fraîche, solaire et légère.",
     "image": "/assets/products/08-brume-coconut-lime-verbena.jpeg",
     "outOfStock": false
   },
@@ -85,7 +85,7 @@
     "category": "brumes",
     "price": 2900,
     "emoji": "🌿",
-    "desc": "Brume parfumée Lost in Santal, senteur boisée et raffinée.",
+    "desc": "Lost in Santal offre une signature boisée raffinée, parfaite pour celles qui veulent une brume élégante avec une vraie présence.",
     "image": "/assets/products/09-brume-lost-in-santal.jpeg",
     "outOfStock": false
   },
@@ -95,7 +95,7 @@
     "category": "brumes",
     "price": 2300,
     "emoji": "🌷",
-    "desc": "Brume parfumée Pure Wonder, senteur féminine délicate.",
+    "desc": "Pure Wonder dépose une fragrance délicate et lumineuse, facile à porter pour une touche féminine propre et soignée.",
     "image": "/assets/products/10-brume-pure-wonder.jpeg",
     "outOfStock": false
   },
@@ -105,7 +105,7 @@
     "category": "brumes",
     "price": 2800,
     "emoji": "❄️",
-    "desc": "Brume parfumée Snowflakes & Cashmere, flacon vert, format 236 ml.",
+    "desc": "Cette version verte de Snowflakes & Cashmere propose une senteur douce et enveloppante, parfaite pour parfumer la peau avec finesse.",
     "image": "/assets/products/11-brume-snowflakes-et-cashmere-verte.jpeg",
     "outOfStock": false
   },
@@ -115,7 +115,7 @@
     "category": "brumes",
     "price": 2900,
     "emoji": "🍦",
-    "desc": "Brume parfumée Warm Vanilla Sugar, senteur vanille gourmande.",
+    "desc": "Warm Vanilla Sugar séduit avec sa vanille douce et gourmande, une brume réconfortante qui donne une impression chaleureuse et sucrée.",
     "image": "/assets/products/12-brume-warm-vanilla-sugar.jpeg",
     "outOfStock": false
   },
@@ -125,7 +125,7 @@
     "category": "brumes",
     "price": 3300,
     "emoji": "💗",
-    "desc": "Brume parfumée Pink Obsessed, flacon rose, format 236 ml.",
+    "desc": "Pink Obsessed est une brume féminine et lumineuse, parfaite pour celles qui aiment les parfums doux avec une touche glamour.",
     "image": "/assets/products/13-brume-pink-obsessed.jpeg",
     "outOfStock": false
   },
@@ -135,7 +135,7 @@
     "category": "brumes",
     "price": 0,
     "emoji": "🌸",
-    "desc": "Brume parfumée Japanese Cherry Blossom, senteur florale élégante.",
+    "desc": "Japanese Cherry Blossom apporte une élégance florale intemporelle, idéale pour une routine parfumée raffinée et féminine.",
     "image": "/assets/products/14-brume-japanese-cherry-blossom.jpeg",
     "outOfStock": false
   },
@@ -145,7 +145,7 @@
     "category": "deodorants_femmes",
     "price": 2000,
     "emoji": "🧴",
-    "desc": "Déodorant Nivea Fresh Energy anti-transpirant, protection 48h.",
+    "desc": "Nivea Fresh Energy aide à garder une sensation de fraîcheur nette et propre, avec une protection anti-transpirante pensée pour la journée.",
     "image": "/assets/products/15-deodorant-nivea-fresh-energy.jpeg",
     "outOfStock": false
   },
@@ -155,7 +155,7 @@
     "category": "deodorants_hommes",
     "price": 2500,
     "emoji": "🧴",
-    "desc": "Déodorant Nivea Men Fresh Power, protection longue durée.",
+    "desc": "Nivea Men Fresh Power accompagne les journées actives avec une fraîcheur masculine efficace et une protection longue durée.",
     "image": "/assets/products/16-deodorant-nivea-men-fresh-power.jpeg",
     "outOfStock": false
   },
@@ -165,7 +165,7 @@
     "category": "brumes",
     "price": 2400,
     "emoji": "✨",
-    "desc": "Brume parfumée scintillante Into The Night, format 236 ml.",
+    "desc": "Into The Night Diamond Shimmer Mist parfume la peau d'une senteur intense et laisse un fini scintillant idéal pour les occasions spéciales.",
     "image": "/assets/products/17-brume-into-the-night-diamond-shimmer-mist.jpeg",
     "outOfStock": false
   },
@@ -175,7 +175,7 @@
     "category": "brumes",
     "price": 2800,
     "emoji": "🌺",
-    "desc": "Brume parfumée Floral Fantasy, senteur florale intense.",
+    "desc": "Floral Fantasy offre un bouquet floral affirmé, parfait pour celles qui veulent une brume féminine, expressive et remarquée.",
     "image": "/assets/products/18-brume-floral-fantasy.jpeg",
     "outOfStock": false
   },
@@ -185,7 +185,7 @@
     "category": "brumes",
     "price": 2900,
     "emoji": "🌼",
-    "desc": "Brume parfumée Brightest Bloom, senteur florale et lumineuse.",
+    "desc": "Brightest Bloom illumine la routine avec une senteur florale fraîche et radieuse, idéale pour une impression douce et soignée.",
     "image": "/assets/products/19-brume-brightest-bloom.jpeg",
     "outOfStock": false
   },
@@ -195,7 +195,7 @@
     "category": "brumes",
     "price": 0,
     "emoji": "🌙",
-    "desc": "Brume parfumée Into The Night, senteur élégante et intense.",
+    "desc": "Into The Night révèle une fragrance élégante, profonde et sensuelle, parfaite pour le soir ou pour marquer votre présence avec style.",
     "image": "/assets/products/20-brume-into-the-night.jpeg",
     "outOfStock": false
   },
@@ -205,7 +205,7 @@
     "category": "brumes",
     "price": 0,
     "emoji": "💙",
-    "desc": "Brume parfumée Gingham, senteur fraîche et légère.",
+    "desc": "Gingham est une brume fraîche, propre et légère, facile à porter tous les jours pour une sensation simple et élégante.",
     "image": "/assets/products/21-brume-gingham.jpeg",
     "outOfStock": false
   },
@@ -215,7 +215,7 @@
     "category": "brumes",
     "price": 0,
     "emoji": "🍬",
-    "desc": "Brume parfumée Twisted Peppermint, senteur fraîche et sucrée.",
+    "desc": "Twisted Peppermint apporte une fraîcheur sucrée et pétillante, idéale pour une brume originale qui réveille les sens.",
     "image": "/assets/products/22-brume-twisted-peppermint.jpeg",
     "outOfStock": false
   },
@@ -225,7 +225,7 @@
     "category": "brumes",
     "price": 2800,
     "emoji": "💗",
-    "desc": "Brume parfumée Gingham Gorgeous, flacon rose, format 236 ml.",
+    "desc": "Gingham Gorgeous dévoile une senteur féminine, fruitée-florale et lumineuse, parfaite pour une touche fraîche et glamour.",
     "image": "/assets/products/23-brume-gingham-gorgeous.jpeg",
     "outOfStock": false
   },
@@ -235,7 +235,7 @@
     "category": "brumes",
     "price": 2800,
     "emoji": "⭐",
-    "desc": "Brume parfumée In The Stars, senteur chic et lumineuse.",
+    "desc": "In The Stars signe une fragrance chic et lumineuse, idéale pour celles qui veulent une brume élégante avec une belle personnalité.",
     "image": "/assets/products/24-brume-in-the-stars.jpeg",
     "outOfStock": false
   },
@@ -245,7 +245,7 @@
     "category": "brumes",
     "price": 3900,
     "emoji": "🌈",
-    "desc": "Brume parfumée Musk, senteur musquée multicolore.",
+    "desc": "Musk mise sur une senteur musquée douce et moderne, parfaite pour un parfum propre, discret et sophistiqué.",
     "image": "/assets/products/25-brume-musk.jpeg",
     "outOfStock": false
   },
@@ -255,7 +255,7 @@
     "category": "deodorants_femmes",
     "price": 0,
     "emoji": "🧴",
-    "desc": "Déodorant Nivea Pure Invisible anti-transpirant, protection 48h.",
+    "desc": "Nivea Pure Invisible aide à rester fraîche tout en limitant les traces visibles, un essentiel pratique pour les tenues claires ou foncées.",
     "image": "/assets/products/26-deodorant-nivea-pure-invisible.jpeg",
     "outOfStock": false
   },
@@ -265,7 +265,7 @@
     "category": "deodorants_femmes",
     "price": 3000,
     "emoji": "🌿",
-    "desc": "Déodorant Vaseline Aloe Sensitive, protection 48h.",
+    "desc": "Vaseline Aloe Sensitive combine fraîcheur et douceur avec une formule pensée pour les peaux sensibles et les journées bien remplies.",
     "image": "/assets/products/27-deodorant-vaseline-aloe-sensitive.jpeg",
     "outOfStock": false
   },
@@ -275,7 +275,7 @@
     "category": "deodorants_femmes",
     "price": 0,
     "emoji": "🧴",
-    "desc": "Déodorant Nivea Protect & Care, protection 48h.",
+    "desc": "Nivea Protect & Care offre une sensation de soin et de fraîcheur, idéale pour une protection quotidienne simple et rassurante.",
     "image": "/assets/products/28-deodorant-nivea-protect-et-care.jpeg",
     "outOfStock": false
   },
@@ -285,7 +285,7 @@
     "category": "soins_bucco_dentaire",
     "price": 0,
     "emoji": "🪥",
-    "desc": "Dentifrice Colgate Kids Big Smiles pour enfants de 6 à 9 ans.",
+    "desc": "Colgate Kids Big Smiles accompagne les enfants de 6 à 9 ans avec un dentifrice adapté pour encourager une routine sourire facile.",
     "image": "/assets/products/29-dentifrice-colgate-kids-big-smiles-6-9-ans.jpeg",
     "outOfStock": false
   },
@@ -295,7 +295,7 @@
     "category": "deodorants_hommes",
     "price": 2400,
     "emoji": "⚫",
-    "desc": "Déodorant Adidas Victory League Deo Body Spray, format 150 ml.",
+    "desc": "Adidas Victory League apporte une fraîcheur sportive et masculine, pratique après la douche, le sport ou avant une journée active.",
     "image": "/assets/products/30-deodorant-adidas-victory-league.jpeg",
     "outOfStock": false
   },
@@ -305,7 +305,7 @@
     "category": "deodorants_femmes",
     "price": 0,
     "emoji": "🌸",
-    "desc": "Déodorant Monsavon Mon Déo, senteur thé vert et fleur de lotus.",
+    "desc": "Monsavon Thé Vert & Fleur de Lotus associe une fraîcheur végétale à une note florale douce pour une sensation propre et délicate.",
     "image": "/assets/products/31-deodorant-monsavon-the-vert-et-fleur-de-lotus.jpeg",
     "outOfStock": false
   },
@@ -315,7 +315,7 @@
     "category": "deodorants_femmes",
     "price": 0,
     "emoji": "💧",
-    "desc": "Déodorant Vaseline Active Fresh, protection 48h.",
+    "desc": "Vaseline Active Fresh offre une fraîcheur dynamique et facile à porter, parfaite pour rester à l'aise pendant la journée.",
     "image": "/assets/products/32-deodorant-vaseline-active-fresh.jpeg",
     "outOfStock": false
   },
@@ -325,7 +325,7 @@
     "category": "brumes",
     "price": 0,
     "emoji": "☀️",
-    "desc": "Brume parfumée Gingham Glow, senteur chaude et lumineuse.",
+    "desc": "Gingham Glow réchauffe la peau avec une senteur lumineuse et solaire, idéale pour ajouter une touche éclatante à votre routine.",
     "image": "/assets/products/33-brume-gingham-glow.jpeg",
     "outOfStock": false
   },
@@ -335,7 +335,7 @@
     "category": "lait_corps",
     "price": 0,
     "emoji": "🧴",
-    "desc": "Pack de deux déodorants Nivea Men Protect & Care, protection 48h.",
+    "desc": "Un duo Nivea Men Protect & Care pratique pour garder une protection fraîche sous la main, à la maison, au travail ou en déplacement.",
     "image": "/assets/products/34-duo-nivea-men-protect-et-care.jpeg",
     "outOfStock": false
   },
@@ -345,7 +345,7 @@
     "category": "deodorants_femmes",
     "price": 0,
     "emoji": "❤️",
-    "desc": "Déodorant Monsavon au lait, senteur grenade énergisante.",
+    "desc": "Monsavon Grenade Energisant apporte une senteur fruitée et vivifiante, parfaite pour commencer la journée avec une impression de fraîcheur.",
     "image": "/assets/products/35-deodorant-monsavon-grenade-energisant.jpeg",
     "outOfStock": false
   },
@@ -355,7 +355,7 @@
     "category": "deodorants_hommes",
     "price": 0,
     "emoji": "⚫",
-    "desc": "Déodorant Nivea Men Black & White Invisible Original, protection 48h.",
+    "desc": "Nivea Men Black & White Invisible aide à protéger vos vêtements des traces visibles tout en offrant une fraîcheur masculine au quotidien.",
     "image": "/assets/products/36-deodorant-nivea-men-black-et-white-invisible.jpeg",
     "outOfStock": false
   },
@@ -365,7 +365,7 @@
     "category": "soins_bucco_dentaire",
     "price": 0,
     "emoji": "🪥",
-    "desc": "Dentifrice Colgate Natural White, format 75 ml.",
+    "desc": "Colgate Natural White est un dentifrice pratique au format 75 ml, idéal pour une routine bucco-dentaire propre et soignée.",
     "image": "/assets/products/37-dentifrice-colgate-natural.jpeg",
     "outOfStock": false
   },
@@ -375,7 +375,7 @@
     "category": "deodorants_hommes",
     "price": 0,
     "emoji": "🧴",
-    "desc": "Déodorant Nivea Men Sensitive Protect, protection 48h.",
+    "desc": "Nivea Men Sensitive Protect offre une protection fraîche pensée pour les peaux sensibles, avec un confort adapté à l'usage quotidien.",
     "image": "/assets/products/38-deodorant-nivea-men-sensitive-protect.jpeg",
     "outOfStock": false
   },
@@ -385,7 +385,7 @@
     "category": "lait_corps",
     "price": 3400,
     "emoji": "🚿",
-    "desc": "Douche soin gommante Ushuaïa Hammam au savon noir et huile d’argan.",
+    "desc": "Ushuaïa Hammam Argan transforme la douche en moment sensoriel avec savon noir et huile d'argan pour une peau douce et parfumée.",
     "image": "/assets/products/39-gel-douche-ushuaia-hammam-argan.jpeg",
     "outOfStock": false
   }
